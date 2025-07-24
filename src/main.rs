@@ -8,11 +8,13 @@ use rtt_target::{rprintln, rtt_init_print};
 
 #[entry]
 fn main() -> ! {
-    rtt_init_print!();
-    rprintln!("Hello from RTT");
+    // rtt_init_print!();
+    // rprintln!("Hello from RTT");
+    let mut x: usize = 0;
     loop {
-        rprintln!("Echo...");
-        for _ in 0..100_000 {
+        x += 1;
+        // rprintln!("Echo...");
+        for _ in 0..x {
             nop();
         }
     }
